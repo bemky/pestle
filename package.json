@@ -1,0 +1,23 @@
+{
+  "name": "pestle",
+  "version": "0.0.1",
+  "description": "Components for building a UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bemky/pestle.git"
+  },
+  "keywords": [
+    "UI",
+    "components"
+  ],
+  "author": "Ben Ehmke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bemky/pestle/issues"
+  },
+  "homepage": "https://github.com/bemky/pestle#readme"
+}
