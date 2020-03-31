@@ -1,17 +1,24 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
+set :source, 'docs-src'
+set :build_dir, 'docs'
 
-activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
-end
+activate :external_pipeline,
+         name: :webpack,
+         command: build? ?
+         "./node_modules/webpack/bin/webpack.js --bail -p" :
+         "./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
+         source: ".tmp/assets",
+         latency: 1
+
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
 # Per-page layout changes
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
+# page '/*.xml', layout: false
+# page '/*.json', layout: false
+# page '/*.txt', layout: false
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'

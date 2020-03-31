@@ -2,4 +2,8 @@
 .cache
 .DS_Store
 .sass-cache
+.tm_properties
 build/
+node_modules/
+tmp/
+.tmp/
